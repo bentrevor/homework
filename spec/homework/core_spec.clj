@@ -25,7 +25,7 @@
         (fn [_] false);never happy!
         @tree)))
 
-  (it "finds the second child of the root"
+  (xit "finds the second child of the root"
     (should=
       {:contents "SECOND CHILD"
        :children [{:contents "GRANDCHILD" :children []}]}
@@ -50,7 +50,7 @@
                [22
                 [5 [81]]]])
 
-  (it "Finds the grandchild with contents of '5'"
+  (xit "Finds the grandchild with contents of '5'"
     (should=
       [5 [81]]
       (find-node-custom #(= (first %) 5) rest @tree))))
@@ -66,7 +66,7 @@
                  [4 [101 [78]]
                   [5 [9000]]]]]
                [77 [11 [5]]]])
-  (it "finds the [5] which is found via a path of 1-2-3-4-5"
+  (xit "finds the [5] which is found via a path of 1-2-3-4-5"
     (should=
       [5 [9000]]
       (find-node-with-path
@@ -82,7 +82,7 @@
                          {:contents "PARENT JOANNE"
                           :children [{:contents "GRANDCHILD LOGAN" :children []}
                                      {:contents "GRANDCHILD KATIE" :children []}]}]})
-  (it "Finds all the grandchildren"
+  (xit "Finds all the grandchildren"
     (should=
       #{{:contents "GRANDCHILD DYLAN" :children []}
         {:contents "GRANDCHILD LOGAN" :children []}
